@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful Mobile Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* General padding for content areas */
+        .content-padding {
+            padding: 10px;
+        }
+        /* Color customization */
+        .custom-header, .custom-footer {
+            background-color: #3388cc; /* A nice blue */
+            color: #ffffff;
+            text-shadow: none; /* Removes the default text-shadow */
+        }
+        .custom-content {
+            background-color: #eeeeee; /* Light gray background for content */
+        }
+        .ui-btn {
+            background-color: #ff9900; /* Orange buttons */
+            color: white;
+        }
+        .ui-btn-active {
+            background-color: #005599; /* Darker blue for active state */
+        }
+        .ui-listview>li>a {
+            border-bottom: 1px solid #ddd; /* Adds a subtle line between list items */
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div data-role="page" id="page1">
+        <div data-role="header" class="custom-header">
+            <h1>Welcome</h1>
+        </div>
+        <div role="main" class="ui-content custom-content content-padding">
+            <h2>About Us</h2>
+            <p>Welcome to our mobile site! This page gives you an overview of our services.</p>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" class="custom-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#page2">Details</a></li>
+                    <li><a href="#page3">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div data-role="page" id="page2">
+        <div data-role="header" class="custom-header">
+            <h1>Details</h1>
+        </div>
+        <div role="main" class="ui-content custom-content content-padding">
+            <h2>Our Services</h2>
+            <p>Here you can find more details about our services.</p>
+            <ul data-role="listview" data-inset="true">
+                <li>Web Development</li>
+                <li>Mobile Applications</li>
+                <li>Digital Marketing</li>
+            </ul>
+            <a href="#page1" data-role="button" data-icon="home">Back to Home</a>
+        </div>
+        <div data-role="footer" class="custom-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1">Home</a></li>
+                    <li><a href="#page2" class="ui-btn-active ui-state-persist">Details</a></li>
+                    <li><a href="#page3">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div data-role="page" id="page3">
+        <div data-role="header" class="custom-header">
+            <h1>Contact Us</h1>
+        </div>
+        <div role="main" class="ui-content custom-content content-padding">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"></textarea>
+                <button type="submit" data-role="button" data-icon="check">Send</button>
+            </form>
+        </div>
+        <div data-role="footer" class="custom-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1">Home</a></li>
+                    <li><a href="#page2">Details</a></li>
+                    <li><a href="#page3" class="ui-btn-active ui-state-persist">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
